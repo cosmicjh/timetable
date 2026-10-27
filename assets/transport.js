@@ -8,7 +8,7 @@
   function connect(){
     if(ready)return ready;
     const url=endpoint();
-    if(!validateUrl(url)){const error=Error('연결 주소를 설정하세요.');error.code='CONNECTION_REQUIRED';return Promise.reject(error);}
+    if(!validateUrl(url)){const error=Error('관리자 → 연결에서 서버 주소를 설정하세요.');error.code='CONNECTION_REQUIRED';return Promise.reject(error);}
     channel=Array.from(crypto.getRandomValues(new Uint8Array(24)),b=>b.toString(16).padStart(2,'0')).join('');
     ready=new Promise((resolve,reject)=>{
       const timer=setTimeout(()=>{cleanup();ready=null;reject(Error('서버 연결을 확인하세요. Apps Script 직접 주소로도 접속할 수 있습니다.'));},40000);
