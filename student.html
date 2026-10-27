@@ -14,11 +14,11 @@
 <script defer src="assets/import.js"></script>
 <script defer src="assets/app.js"></script>
 </head>
-<body data-page="student">
-<div id="busy" class="busy-line" hidden></div>
-<header id="header" class="topbar"></header>
-<main id="app" class="shell"></main>
-<dialog id="modal"></dialog>
+<body data-page="student" data-loading="true">
+<div id="busy" class="busy-line" role="status" aria-label="불러오는 중"></div>
+<header id="header" class="topbar" inert aria-busy="true"></header>
+<main id="app" class="shell" inert aria-busy="true"></main>
+<dialog id="modal" inert aria-busy="true"></dialog>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <div id="print-root" class="print-root"></div>
 
