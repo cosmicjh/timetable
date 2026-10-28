@@ -3,7 +3,7 @@
   let ready=null, bridge=null, peer=null, channel='', counter=0;
   const pending=new Map();
   const direct=()=>!!(global.google&&google.script&&google.script.run);
-  function endpoint(){return localStorage.getItem('timetable.apiUrl')||(global.TIMETABLE_CONFIG||{}).apiUrl||'';}
+  function endpoint(){return (global.TIMETABLE_CONFIG||{}).apiUrl||localStorage.getItem('timetable.apiUrl')||'';}
   function validateUrl(value){return /^https:\/\/script\.google\.com\/(?:macros\/s\/|a\/macros\/[^/]+\/s\/)[A-Za-z0-9_-]+\/exec$/.test(value);}
   function connect(){
     if(ready)return ready;
