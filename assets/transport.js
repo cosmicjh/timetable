@@ -27,10 +27,12 @@
     return ready;
   }
   async function request(action,args,token){
+    const started=Date.now();
     const payload=Object.assign({},args||{},{action:action,token:token||''});
     let result;
     if(direct())result=await new Promise((resolve,reject)=>google.script.run.withSuccessHandler(resolve).withFailureHandler(()=>reject(Error('서버 연결을 확인하세요.'))).api(payload));
     else {await connect();result=await new Promise((resolve,reject)=>{const id=channel+':'+(++counter);const timer=setTimeout(()=>{pending.delete(id);reject(Error('응답을 확인하지 못했습니다. 새로고침하여 저장 결과를 확인하세요.'));},110000);pending.set(id,{resolve,reject,timer});peer.window.postMessage({type:'TT_REQUEST',channel:channel,id:id,payload:payload},peer.origin);});}
+    const log=global.TIMETABLE_PERF||(global.TIMETABLE_PERF=[]);log.push({action,elapsedMs:Date.now()-started,serverMs:result&&result.timing&&result.timing.serverMs,storeCache:!!(result&&result.timing&&result.timing.storeCache),runtimeCache:!!(result&&result.timing&&result.timing.runtimeCache)});if(log.length>80)log.shift();
     if(!result||!result.ok){const error=Error(result&&result.error||'요청을 처리하지 못했습니다.');error.code=result&&result.code||'REQUEST_ERROR';throw error;}
     return result.data;
   }
