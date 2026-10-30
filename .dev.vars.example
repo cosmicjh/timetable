@@ -1,0 +1,4 @@
+# Generate using pnpm setup:local. Do not copy hashes from another application.
+PASSWORD_PEPPER=
+BOOTSTRAP_TEACHER_HASH=
+BOOTSTRAP_ADMIN_HASH=

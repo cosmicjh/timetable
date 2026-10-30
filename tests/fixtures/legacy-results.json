@@ -1,0 +1,934 @@
+{
+  "sourceSha256": "71f74eb887a3015d667dc45e9b52e4c16469b54d43e46c509bb8d9d4baa0fbb2",
+  "students": [
+    {
+      "kind": "student",
+      "id": "student-one",
+      "studentNumber": "30101",
+      "name": "가상학생하나",
+      "grade": "3",
+      "classNum": "1",
+      "number": "1",
+      "cells": [
+        {
+          "day": "월",
+          "period": 1,
+          "subject": "창체",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "월",
+          "period": 2,
+          "subject": "가상과학",
+          "sectionCode": "A1",
+          "room": "과학실",
+          "isElective": true
+        },
+        {
+          "day": "월",
+          "period": 3,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "월",
+          "period": 4,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "월",
+          "period": 5,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "월",
+          "period": 6,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "월",
+          "period": 7,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "화",
+          "period": 1,
+          "subject": "국어",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "화",
+          "period": 2,
+          "subject": "가상과학",
+          "sectionCode": "A1",
+          "room": "과학실",
+          "isElective": true
+        },
+        {
+          "day": "화",
+          "period": 3,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "화",
+          "period": 4,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "화",
+          "period": 5,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "화",
+          "period": 6,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "화",
+          "period": 7,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 1,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 2,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 3,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 4,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 5,
+          "subject": "창체",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 6,
+          "subject": "창체",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 7,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 1,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 2,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 3,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 4,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 5,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 6,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 7,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "금",
+          "period": 1,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "금",
+          "period": 2,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "금",
+          "period": 3,
+          "subject": "가상과학",
+          "sectionCode": "A1",
+          "room": "과학실",
+          "isElective": true
+        },
+        {
+          "day": "금",
+          "period": 4,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "금",
+          "period": 5,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "금",
+          "period": 6,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "금",
+          "period": 7,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        }
+      ]
+    },
+    {
+      "kind": "student",
+      "id": "student-two",
+      "studentNumber": "30102",
+      "name": "가상학생둘",
+      "grade": "3",
+      "classNum": "1",
+      "number": "2",
+      "cells": [
+        {
+          "day": "월",
+          "period": 1,
+          "subject": "창체",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "월",
+          "period": 2,
+          "subject": "가상과학",
+          "sectionCode": "A2",
+          "room": "다른실",
+          "isElective": true
+        },
+        {
+          "day": "월",
+          "period": 3,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "월",
+          "period": 4,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "월",
+          "period": 5,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "월",
+          "period": 6,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "월",
+          "period": 7,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "화",
+          "period": 1,
+          "subject": "국어",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "화",
+          "period": 2,
+          "subject": "가상과학",
+          "sectionCode": "A2",
+          "room": "다른실",
+          "isElective": true
+        },
+        {
+          "day": "화",
+          "period": 3,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "화",
+          "period": 4,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "화",
+          "period": 5,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "화",
+          "period": 6,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "화",
+          "period": 7,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 1,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 2,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 3,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 4,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 5,
+          "subject": "창체",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 6,
+          "subject": "창체",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "수",
+          "period": 7,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 1,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 2,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 3,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 4,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 5,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 6,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "목",
+          "period": 7,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "금",
+          "period": 1,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "금",
+          "period": 2,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "금",
+          "period": 3,
+          "subject": "가상과학",
+          "sectionCode": "A2",
+          "room": "다른실",
+          "isElective": true
+        },
+        {
+          "day": "금",
+          "period": 4,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "금",
+          "period": 5,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "금",
+          "period": 6,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        },
+        {
+          "day": "금",
+          "period": 7,
+          "subject": "",
+          "sectionCode": "",
+          "room": "",
+          "isElective": false
+        }
+      ]
+    }
+  ],
+  "teacher": {
+    "kind": "teacher",
+    "name": "가상교사",
+    "cells": [
+      {
+        "day": "월",
+        "period": 1,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "월",
+        "period": 2,
+        "subject": "가상과학",
+        "sectionCode": "A1",
+        "room": "과학실",
+        "isElective": true,
+        "roster": {
+          "kind": "elective",
+          "sectionId": "section-one"
+        }
+      },
+      {
+        "day": "월",
+        "period": 3,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "월",
+        "period": 4,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "월",
+        "period": 5,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "월",
+        "period": 6,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "월",
+        "period": 7,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "화",
+        "period": 1,
+        "subject": "국어",
+        "sectionCode": "",
+        "room": "3-1",
+        "isElective": false,
+        "roster": {
+          "kind": "common",
+          "classes": [
+            "3-1"
+          ],
+          "subject": "국어",
+          "detail": "3-1"
+        }
+      },
+      {
+        "day": "화",
+        "period": 2,
+        "subject": "가상과학",
+        "sectionCode": "A1",
+        "room": "과학실",
+        "isElective": true,
+        "roster": {
+          "kind": "elective",
+          "sectionId": "section-one"
+        }
+      },
+      {
+        "day": "화",
+        "period": 3,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "화",
+        "period": 4,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "화",
+        "period": 5,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "화",
+        "period": 6,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "화",
+        "period": 7,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "수",
+        "period": 1,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "수",
+        "period": 2,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "수",
+        "period": 3,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "수",
+        "period": 4,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "수",
+        "period": 5,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "수",
+        "period": 6,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "수",
+        "period": 7,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "목",
+        "period": 1,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "목",
+        "period": 2,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "목",
+        "period": 3,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "목",
+        "period": 4,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "목",
+        "period": 5,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "목",
+        "period": 6,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "목",
+        "period": 7,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "금",
+        "period": 1,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "금",
+        "period": 2,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "금",
+        "period": 3,
+        "subject": "가상과학",
+        "sectionCode": "A1",
+        "room": "과학실",
+        "isElective": true,
+        "roster": {
+          "kind": "elective",
+          "sectionId": "section-one"
+        }
+      },
+      {
+        "day": "금",
+        "period": 4,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "금",
+        "period": 5,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "금",
+        "period": 6,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      },
+      {
+        "day": "금",
+        "period": 7,
+        "subject": "",
+        "sectionCode": "",
+        "room": "과학실",
+        "isElective": false
+      }
+    ]
+  },
+  "rosters": [
+    {
+      "title": "가상과학",
+      "detail": "A1",
+      "students": [
+        {
+          "grade": "3",
+          "classNum": "1",
+          "number": "1",
+          "name": "가상학생하나",
+          "note": "가상 자료"
+        }
+      ]
+    },
+    {
+      "title": "가상과학",
+      "detail": "A2",
+      "students": [
+        {
+          "grade": "3",
+          "classNum": "1",
+          "number": "2",
+          "name": "가상학생둘",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "가상언어",
+      "detail": "B1",
+      "students": [
+        {
+          "grade": "3",
+          "classNum": "1",
+          "number": "1",
+          "name": "가상학생하나",
+          "note": "가상 자료"
+        }
+      ]
+    }
+  ]
+}

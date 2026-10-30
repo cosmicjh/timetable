@@ -1,0 +1,30 @@
+{
+  "name": "school-timetable-workers",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/wrangler.mjs dev --local --ip 127.0.0.1 --port 8787",
+    "deploy": "node scripts/check-deploy.mjs && wrangler deploy",
+    "setup:local": "node scripts/setup.mjs",
+    "setup:production": "node scripts/setup.mjs --production",
+    "db:migrate:local": "node scripts/wrangler.mjs d1 migrations apply DB --local",
+    "db:migrate:remote": "node scripts/check-deploy.mjs && wrangler d1 migrations apply DB --remote",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "test:worker": "node tests/wrangler.mjs",
+    "test:all": "pnpm test && pnpm test:browser && pnpm test:worker",
+    "benchmark": "node scripts/benchmark.mjs",
+    "compare:backups": "node scripts/compare-backups.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "miniflare": "^4.20260730.0",
+    "playwright": "^1.64.1",
+    "wrangler": "^4.154.0"
+  }
+}
