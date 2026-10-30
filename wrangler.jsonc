@@ -25,5 +25,7 @@
   "observability": {
     "enabled": false
   },
-  "account_id": "965071bae1ca798003675034b0ce7ce5"
+  "account_id": "965071bae1ca798003675034b0ce7ce5",
+  "workers_dev": true,
+  "preview_urls": false
 }

@@ -1,5 +1,9 @@
 # 개인 시간표 · Workers + Static Assets + D1
 
+배포 주소: [school-timetable.cosmicjh.workers.dev](https://school-timetable.cosmicjh.workers.dev) · [관리자](https://school-timetable.cosmicjh.workers.dev/admin.html)
+
+2026-10-30 GitHub `codex/workers-d1` 브랜치 푸시, 전용 원격 D1·Worker·운영 Secret 배포를 완료했습니다. 실제 학생 자료는 아직 이관하지 않았습니다. [실제 배포 결과와 남은 설정](docs/DEPLOYED_2026-10-30.md)을 확인하세요.
+
 `cosmicjh/timetable`의 기존 HTML·모바일 CSS·HTML 내장 Pretendard·엑셀 등록·PNG·인쇄 화면을 유지하고, Apps Script 브리지를 같은 출처의 Workers API와 D1으로 교체했습니다. GitHub는 소스 관리와 Workers Builds 연결에 계속 사용합니다.
 
 이 프로젝트 루트는 **개인시간표 저장소의 루트**입니다. 다른 `course-allocation` 프로젝트의 Pages 설정이나 DB를 사용하지 않습니다. 이 작업의 복제본은 `course-allocation/timetable-cloudflare/`, 브랜치는 `codex/workers-d1`, 원본 커밋은 `bd6e7db`입니다. 기존 GitHub Pages·Apps Script·스프레드시트는 수정하거나 삭제하지 않았습니다.
@@ -17,7 +21,7 @@ pnpm dev
 
 `http://127.0.0.1:8787`에 접속합니다. 학생·교사 진입은 `/`, 별도 관리 화면은 `/admin.html`입니다. 새 DB의 교사·관리자 비밀번호는 각각 `1234`입니다. 관리자 → 설정에서 변경합니다. `setup:local` 재실행·재배포는 기존 비밀번호를 덮어쓰지 않습니다.
 
-로컬 명령은 자동 생성되는 Git 제외 파일 `wrangler.local.json`과 로컬 D1 에뮬레이터를 사용합니다. `local-timetable-emulator`는 로컬 저장소 식별자이며 Cloudflare DB ID가 아닙니다. 운영용 `wrangler.jsonc`에는 확인하지 않은 계정·DB ID를 넣지 않았습니다.
+로컬 명령은 자동 생성되는 Git 제외 파일 `wrangler.local.json`과 로컬 D1 에뮬레이터를 사용합니다. `local-timetable-emulator`는 로컬 저장소 식별자이며 Cloudflare DB ID가 아닙니다. 운영용 `wrangler.jsonc`에는 실제 배포한 계정과 개인시간표 전용 D1 ID를 설정했습니다.
 
 실제 자료는 관리자 → 변경 이력 → 백업 불러오기에서 기존 JSON을 복원하거나, 자료 등록에서 기존 엑셀 5개를 미리보기 후 등록합니다. 학교의 전체교사시간표 행·열을 변경할 필요가 없습니다. 운영 자료·비밀값은 `private/` 등 Git 제외 위치에 보관합니다.
 
@@ -47,7 +51,7 @@ Linux/macOS에서 브라우저가 없으면 `pnpm exec playwright install --with
 | API | 같은 Worker의 `/api/*`, Worker 우선 실행 |
 | D1 | `DB`, 새 `school-timetable-db`, `migrations/` |
 
-새 D1의 실제 ID 입력, 원격 마이그레이션, 최초 인증값 등록, 배포·이관·복구 순서는 [배포 안내](docs/DEPLOYMENT.md)를 따릅니다. Pages 프로젝트로 배포하지 않습니다.
+현재 계정의 D1·마이그레이션·인증값 등록은 완료했습니다. 다른 계정의 최초 구성과 재배포·이관·복구 순서는 [배포 안내](docs/DEPLOYMENT.md)를 따릅니다. Pages 프로젝트로 배포하지 않습니다.
 
 ## 구현과 결과
 

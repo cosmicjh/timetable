@@ -19,12 +19,13 @@
     "test:worker": "node tests/wrangler.mjs",
     "test:all": "pnpm test && pnpm test:browser && pnpm test:worker",
     "benchmark": "node scripts/benchmark.mjs",
-    "compare:backups": "node scripts/compare-backups.mjs"
+    "compare:backups": "node scripts/compare-backups.mjs",
+    "test:remote": "node scripts/verify-remote.mjs"
   },
   "devDependencies": {
     "esbuild": "^0.28.2",
     "miniflare": "^4.20260730.0",
     "playwright": "^1.64.1",
-    "wrangler": "^4.154.0"
+    "wrangler": "4.156.0"
   }
 }

@@ -2,7 +2,7 @@
 
 ## 작업 위치와 보존 범위
 
-처음 열린 저장소는 다른 서비스인 교과 시수배당 `course-allocation`이었습니다. 사용자가 알려 준 `cosmicjh/timetable`을 작업 폴더의 `timetable-cloudflare/`에 별도 복제하고 `codex/workers-d1` 브랜치에서 구현했습니다. 원본은 bd6e7db입니다. 시수배당 코드·배포·DB와 기존 개인시간표 GitHub Pages·Apps Script·스프레드시트를 수정하거나 삭제하지 않았습니다. 원격 push·merge·배포도 수행하지 않았습니다.
+처음 열린 저장소는 다른 서비스인 교과 시수배당 `course-allocation`이었습니다. 사용자가 알려 준 `cosmicjh/timetable`을 작업 폴더의 `timetable-cloudflare/`에 별도 복제하고 `codex/workers-d1` 브랜치에서 구현했습니다. 원본은 bd6e7db입니다. 시수배당 코드·배포·DB와 기존 개인시간표 GitHub Pages·Apps Script·스프레드시트를 수정하거나 삭제하지 않았습니다. 이 문서의 초기 로컬 검증 후, 후속 작업에서 원격 브랜치 푸시와 Cloudflare 배포를 수행했습니다. main 병합은 하지 않았습니다. [실제 배포 결과](DEPLOYED_2026-10-30.md)를 함께 확인하세요.
 
 ## 실행 환경
 
@@ -19,7 +19,8 @@ Windows, Node.js 24.22.1, pnpm 11.25.0, Miniflare 4.20260730.0, Wrangler 4.154.0
 | 원본 계산 | 학생·교사 시간표, 분반 명렬표가 원본 Core.gs의 가상 기대 결과와 동일 |
 | 실제 교사 엑셀 | 읽기 전용 파싱, 교사 64명·133행, 요일별 7/7/6/7/7교시 자동 감지 |
 | 운영 학생 자료 이관 | 미수행; 학생 배정·선택과목 원본·운영 JSON 백업 미제공 |
-| 원격 배포·원격 D1 이관 | 미수행; 새 프로젝트 실제 계정/DB ID·Secret 연결 미설정 |
+| 원격 배포 | 후속 작업에서 완료; Worker·전용 D1·Secret 연결·실제 HTTPS 검증 완료 |
+| 원격 운영 학생 자료 이관 | 미수행; 운영 원본 미제공 |
 
 통합 시험은 Miniflare의 실제 D1 SQLite 바인딩을 사용합니다. 별도 테스트 Worker의 SQL 통로는 tests/worker.mjs에만 있으며 배포 entry에는 포함되지 않습니다. Wrangler 검증은 매 실행마다 새 persist 디렉터리의 로컬 D1을 생성합니다. 운영 DB에는 테스트 SQL을 실행하지 않습니다.
 
@@ -62,9 +63,9 @@ Windows, Node.js 24.22.1, pnpm 11.25.0, Miniflare 4.20260730.0, Wrangler 4.154.0
 
 ## 사용자에게 남은 설정
 
-1. 실제 Cloudflare 계정에서 새 school-timetable-db 생성 후 실제 ID를 wrangler.jsonc에 입력.
-2. 새 DB 원격 마이그레이션, 운영 bootstrap Secret 생성·등록, Worker 배포, 최초 비밀번호 변경.
-3. 기존 운영 백업 또는 엑셀로 실제 자료 이관 및 compare:backups 대조.
-4. GitHub Workers Builds 연결과 새 주소 안내. 기존 GitHub Pages를 보존할 게시 브랜치를 확정한 뒤 필요하면 운영 브랜치 병합.
+1. 배포 서비스에 로그인하여 초기 교사·관리자 비밀번호 변경.
+2. 기존 운영 백업 또는 엑셀로 실제 자료 이관 및 compare:backups 대조.
+3. 자동 배포를 사용할 경우 Cloudflare Settings → Builds에서 GitHub 저장소를 연결. 현재 OAuth의 Builds API 권한이 없어 이 연결은 수행하지 않았습니다.
+4. 기존 GitHub Pages를 보존할 게시 브랜치를 확정한 뒤 필요하면 운영 브랜치 병합.
 
-위 원격 작업을 완료했다고 보고하지 않습니다. 구현·로컬 검증·배포/이관/복구 문서는 완료했습니다.
+Worker·D1·Secret 등록과 원격 배포는 완료했습니다. 운영 학생 자료 이관과 GitHub↔Cloudflare 자동 배포 연결은 완료했다고 보고하지 않습니다.

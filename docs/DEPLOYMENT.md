@@ -1,5 +1,7 @@
 # Cloudflare 배포·복구 안내
 
+현재 서비스는 [school-timetable.cosmicjh.workers.dev](https://school-timetable.cosmicjh.workers.dev)에 배포되어 있습니다. 현재 계정의 D1 생성·스키마·Secret 등록은 완료했으므로 재생성하지 않습니다. 아래 최초 준비 절차는 새 계정/새 설치용입니다. [실제 배포 결과](DEPLOYED_2026-10-30.md)를 먼저 확인하세요.
+
 이 안내의 명령은 개인시간표 GitHub 저장소 루트에서 실행합니다. 이 작업의 로컬 복제본은 `course-allocation/timetable-cloudflare`입니다. 기존 시수배당 저장소 루트의 Wrangler 파일과 DB는 다른 서비스입니다.
 
 ## 최초 준비와 배포
@@ -27,7 +29,7 @@ pnpm exec wrangler secret bulk private/bootstrap.local.json
 5. Wrangler가 출력한 HTTPS Workers 주소로 접속합니다. `/api/health`가 JSON을 반환하는지 확인합니다. 교사·관리자 초기 비밀번호 `1234`로 각각 로그인한 뒤 관리자 → 설정에서 비밀번호를 변경합니다. 변경 후 이전 세션이 차단되는지 확인합니다.
 6. 기존 백업을 복원하거나 기존 엑셀 5개를 등록합니다. [이관 절차](MIGRATION.md)에 따라 건수와 시간표·명렬표 결과를 비교한 다음 새 주소를 안내합니다.
 
-새 Worker와 새 DB 생성, Secret 등록, 원격 마이그레이션·자료 이관·배포는 이 작업에서 실행하지 않았습니다. 위 명령은 사용자가 자신의 계정에서 수행할 순서입니다.
+2026-10-30 후속 작업에서 새 Worker·새 DB 생성, Secret 등록, 원격 마이그레이션과 배포를 수행했습니다. 실제 학생 자료 이관은 아직 수행하지 않았습니다. 위 명령은 다른 계정에서 처음 구성할 때의 순서입니다.
 
 ## GitHub 연동 자동 배포
 
@@ -50,7 +52,7 @@ pnpm exec wrangler secret bulk private/bootstrap.local.json
 
 ## 기존 운영 주소 보존
 
-기존 `https://cosmicjh.github.io/timetable`과 Apps Script는 새 서비스 검증 전까지 그대로 둡니다. 현재 변경은 로컬 브랜치에만 있고 원격 push·merge를 수행하지 않았습니다. 새 브랜치로 Workers 시험 배포를 먼저 완료합니다.
+기존 `https://cosmicjh.github.io/timetable`과 Apps Script는 새 서비스 검증 전까지 그대로 둡니다. 전환 코드는 원격 `codex/workers-d1` 브랜치에 푸시했고 해당 코드로 Workers 배포를 완료했습니다. main 병합은 수행하지 않아 기존 Pages 화면이 유지됩니다.
 
 기존 GitHub Pages가 main의 파일을 자동 게시한다면 새 코드의 main 병합이 그 화면을 바꾸게 됩니다. 병합 전에 기존 커밋을 보존하는 별도 legacy 브랜치를 만들고 GitHub Pages의 게시 원본을 그 브랜치로 지정하여 기존 배포를 유지합니다. Workers는 새 운영 브랜치로 연결합니다. 기존 배포나 스프레드시트를 삭제할 필요가 없습니다. Google 서비스를 중단해도 새 Workers 서비스는 동일 출처 API와 D1만으로 운영됩니다.
 
