@@ -1,0 +1,14 @@
+.solver-shell{max-width:1000px;margin:36px auto;padding:0 28px;line-height:1.65}
+.solver-shell>h1{margin-bottom:12px}.solver-shell section{padding:28px 0;border-bottom:1px solid var(--border)}
+.solver-shell h2{margin-bottom:16px}.solver-shell p{margin:10px 0;overflow-wrap:anywhere}
+.solver-shell label{margin:12px 0}.solver-shell input:not([type=checkbox]),.solver-shell select,.solver-shell textarea{display:block;width:100%;margin-top:6px}
+.columns,.weights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.weights{grid-template-columns:repeat(4,minmax(0,1fr))}
+.solver-shell fieldset{margin:24px 0;padding:16px;border:1px solid var(--border);min-width:0}.solver-shell legend{font-weight:600;padding:0 8px}
+.actions,.section-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.section-title{justify-content:space-between}.section-title h2{margin:0}
+.hint{font-size:13px;color:var(--muted)}.solver-shell details{margin:20px 0}.solver-shell summary{cursor:pointer;font-weight:600}
+.table-wrap{overflow:auto;margin:12px 0}.solver-shell table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+.solver-shell td,.solver-shell th{border-bottom:1px solid var(--border);padding:10px;text-align:left;white-space:pre-line;min-width:72px}.solver-shell th{background:var(--ui-subtle);font-weight:600}
+.solver-shell a{text-decoration:underline;text-underline-offset:3px}.solver-shell button:disabled{cursor:default}
+#login{max-width:400px;margin:40px 0}#login button{margin-top:16px}#issues:empty{display:none}#progress{font-variant-numeric:tabular-nums}#result details{border-top:1px solid var(--border);padding-top:12px}
+[hidden]{display:none!important}
+@media(max-width:640px){.solver-shell{padding:0 18px;margin:26px auto}.columns,.weights{grid-template-columns:minmax(0,1fr);gap:0}.topbar{padding:0 18px}.brand{font-size:14px}.solver-shell fieldset{padding:12px}.actions>button{flex:1}.solver-shell h1{font-size:23px}}

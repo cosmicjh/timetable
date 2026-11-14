@@ -145,6 +145,7 @@ try{
  });
  await step('Pages loads the admin solver tab and blocks a different course term',async()=>{
   await clickMenu(page,page.locator('.admin-nav [data-tab=timetable]'));await idle();
+  assert.equal(await page.getByRole('link',{name:'브라우저에서 계산',exact:true}).getAttribute('href'),api+'/solver');
   assert(await page.getByRole('button',{name:'솔버 모델 내보내기',exact:true}).isDisabled());
   assert.match(await page.locator('[aria-label="내보내기 오류"]').innerText(),/학기.*다릅니다/);
  });

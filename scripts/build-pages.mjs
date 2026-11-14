@@ -7,6 +7,8 @@ if(output!==resolve(root,'.cache/pages-site'))throw Error('Invalid Pages output 
 await rm(output,{recursive:true,force:true,maxRetries:5,retryDelay:250});
 await cp(resolve(root,'dist'),output,{recursive:true});
 await rm(resolve(output,'_headers'),{force:true});
+await rm(resolve(output,'solver.html'),{force:true});
+await rm(resolve(output,'solver'),{recursive:true,force:true});
 const apiBase='https://school-timetable.cosmicjh.workers.dev/api/';
 const source=await Promise.all(['studyroom.js','studyroom-layout.js','studyroom-student.js','studyroom.css','font.css','app.js','navigation.js','allocations.js','allocation-import.js','transport.js','assets.js','import.js','password.js','style.css','xlsx.full.min.js','html2canvas.min.js'].map(name=>readFile(resolve(output,'assets',name),'utf8')));
 for(const name of ['timetable-ui.woff2','pretendard.woff2'])source.push(createHash('sha256').update(await readFile(resolve(output,'assets',name))).digest('hex'));

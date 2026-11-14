@@ -35,6 +35,7 @@ try{
  release();await opening;await idle();await page.unroute('**/api/courseWorkspace');
  const button=page.getByRole('button',{name:'솔버 모델 내보내기',exact:true});
  assert(await button.isEnabled());assert.match(await page.locator('[aria-label="내보내기 경고"]').innerText(),/가상교과군 \/ 교사 .*배당 시수가 없어/);
+ const browserLink=page.getByRole('link',{name:'브라우저에서 계산',exact:true});assert.equal(await browserLink.getAttribute('href'),base+'/solver');assert.equal(await browserLink.getAttribute('target'),'_blank');
  const downloadPromise=page.waitForEvent('download');await button.click();const download=await downloadPromise;
  assert.equal(download.suggestedFilename(),'시간표_솔버모델_2026-2.json');
  const model=JSON.parse(await readFile(await download.path(),'utf8'));

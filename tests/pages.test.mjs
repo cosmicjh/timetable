@@ -15,6 +15,7 @@ test('Pages serves the app and shared Pretendard font without redirects, private
  assert.match(await readFile('.cache/pages-site/assets/font.css','utf8'),/font-display:swap;src:url\("pretendard\.woff2"\)/);
  const config=await readFile('.cache/pages-site/config.js','utf8');assert(config.includes('https://school-timetable.cosmicjh.workers.dev/api/'));assert(!config.includes('PASSWORD_'));
  assert(!files.includes('_headers'));assert(!files.includes('scripts/build-pages.mjs'));
+ assert(!files.includes('solver.html'));assert(!files.some(f=>f.replaceAll('\\','/').startsWith('solver/')));
  assert.match(await readFile('.cache/pages-site/404.html','utf8'),/href="\/curriculum\/"/);
  assert.deepEqual(files.filter(f=>f.replaceAll('\\','/').startsWith('class-swap/')).map(f=>f.replaceAll('\\','/').slice('class-swap/'.length)).sort(),['app.js','view.html']);
  const view=await readFile('.cache/pages-site/class-swap/view.html','utf8'),client=await readFile('.cache/pages-site/class-swap/app.js','utf8');
